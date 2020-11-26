@@ -1,0 +1,27 @@
+
+<html !DOCTYPE>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple word shuffler</title>
+</head>
+
+<body> 
+ 
+
+    <p id="answer">The answer is: </p>
+    
+    
+    <script type="text/javascript">
+    var str = "the quick brown fox jumps over the lazy dog A.S.A.P. That's right, this happened.";
+
+var every_word_im_shuffling = str.split(/\s\b(?!\s)/).sort(function(){return 0.5-Math.random()}).join(' ');
+console.log(every_word_im_shuffling);
+
+
+document.getElementById("answer").innerHTML = "Your secret is: " + every_word_im_shuffling;
+    
+    
+    </script>
+</body>
+</html>
